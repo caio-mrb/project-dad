@@ -1,0 +1,16 @@
+meta {
+  name: Get user MultiplayerGames
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{api_url}}/multiplayergames/admin/7
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

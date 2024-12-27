@@ -1,0 +1,30 @@
+meta {
+  name: Put MultiplayerGame OWNING the game (FINISH)
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{api_url}}/multiplayergames/{{last_multiplayer_game_id}}
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "won": true,
+    "pairs": 5,
+    "winner_user_id": {{user_id}},
+    "winner_pairs": 5
+  }
+}
+
+script:post-response {
+  
+  
+}

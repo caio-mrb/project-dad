@@ -1,0 +1,21 @@
+meta {
+  name: Get Auth User
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{api_url}}/users/me
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}
+
+script:post-response {
+  let data = res.getBody();
+  bru.setEnvVar("user_id",data.data.id);
+}

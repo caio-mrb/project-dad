@@ -1,0 +1,22 @@
+meta {
+  name: Patch Game (CHANGE ITS STATUS)
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{api_url}}/games/{{last_game_id}}
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "status": "PL"
+  }
+}

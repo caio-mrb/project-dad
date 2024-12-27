@@ -1,0 +1,16 @@
+meta {
+  name: Get MultiplayerGames
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api_url}}/multiplayergames/
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

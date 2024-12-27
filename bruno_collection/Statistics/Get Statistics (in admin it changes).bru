@@ -1,0 +1,16 @@
+meta {
+  name: Get Statistics (in admin it changes)
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api_url}}/statistics
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

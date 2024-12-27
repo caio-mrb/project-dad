@@ -1,0 +1,16 @@
+meta {
+  name: Block User (ADMIN)
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{api_url}}/users/250
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Accept: application/json
+}

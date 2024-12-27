@@ -1,0 +1,23 @@
+meta {
+  name: Login Admin
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api_url}}/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email":"a1@mail.pt",
+    "password":"123"
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  bru.setEnvVar("token",data.token);
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Get All Transactions (ADMIN)
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{api_url}}/transactions/all
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Get Boards
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api_url}}/boards
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

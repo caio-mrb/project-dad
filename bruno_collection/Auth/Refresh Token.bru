@@ -1,0 +1,21 @@
+meta {
+  name: Refresh Token
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{api_url}}/auth/refreshtoken
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Accept: application/json
+}
+
+script:post-response {
+  let data = res.getBody();
+  bru.setEnvVar("token",data.token);
+}

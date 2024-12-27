@@ -1,0 +1,32 @@
+meta {
+  name: New User
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{api_url}}/users/
+  body: multipartForm
+  auth: none
+}
+
+headers {
+  Accept: application/json
+}
+
+body:json {
+  {
+    "name": "test test",
+    "email": "test13@mail.pt",
+    "password": "123",
+    "nickname": "test13"
+  }
+}
+
+body:multipart-form {
+  name: test
+  nickname: test10
+  email: test10@mail.pt
+  password: 123
+  photo: @file(C:\Users\mrcoo\Desktop\Captura de ecrã 2024-10-29 043547.png)
+}

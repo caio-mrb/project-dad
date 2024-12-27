@@ -1,0 +1,16 @@
+meta {
+  name: Get Users (ADMIN)
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{api_url}}/users/
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Accept: application/json
+}

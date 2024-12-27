@@ -1,0 +1,30 @@
+meta {
+  name: Post Game
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{api_url}}/games
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "type": "S",
+    "status": "PE",
+    "began_at": "2024-11-30 19:20:35",
+    "board_id": "1"
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  bru.setEnvVar("last_game_id",data.data.id);
+}

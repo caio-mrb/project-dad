@@ -1,0 +1,25 @@
+meta {
+  name: Update Game (FINISHED)
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{api_url}}/games/{{last_game_id}}
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "status": "E",
+    "ended_at": "2024-11-30 19:25:35",
+    "total_time": 300,
+    "total_turns_winner": 5
+  }
+}

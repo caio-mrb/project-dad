@@ -1,0 +1,16 @@
+meta {
+  name: Get User
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{api_url}}/users/rebeca
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Accept: application/json
+}

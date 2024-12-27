@@ -1,0 +1,16 @@
+meta {
+  name: Get Games of user
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{api_url}}/games/admin/8
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

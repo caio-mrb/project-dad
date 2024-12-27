@@ -1,0 +1,16 @@
+meta {
+  name: Get Best Games
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{api_url}}/games/personal
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Post Transaction internal
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{api_url}}/transactions/
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "transaction_datetime": "2024-11-30 19:20:35",
+    "user_id": {{user_id}},
+    "game_id":{{last_game_id}},
+    "type": "I",
+    "brain_coins": 10
+  }
+}

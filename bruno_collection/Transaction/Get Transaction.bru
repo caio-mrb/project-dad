@@ -1,0 +1,16 @@
+meta {
+  name: Get Transaction
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{api_url}}/transactions/1
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}
